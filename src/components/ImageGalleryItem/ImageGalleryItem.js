@@ -6,9 +6,7 @@ import {
 
 export default function ImageGalleryItem({
   imgForModal,
-  data: webformatURL,
-  largeImageURL,
-  tags,
+  data: { webformatURL, largeImageURL, tags },
 }) {
   return (
     <ImageGalleryListItem
@@ -24,7 +22,7 @@ ImageGalleryItem.propTypes = {
   data: PropTypes.shape({
     webformatURL: PropTypes.string.isRequired,
     tags: PropTypes.string.isRequired,
-    largeImageURL: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string,
   }),
   imgForModal: PropTypes.func.isRequired,
 };
